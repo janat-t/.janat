@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
-#define PUB push_back
-#define POB pop_back
+#define PB push_back
 #define MP(x,y) make_pair(x,y)
 #define F first
 #define S second

@@ -9,6 +9,9 @@ if [[ -r "$HOME/.janat/templates/.alias" ]]; then
     source "$HOME/.janat/templates/.alias"
 fi
 
+export EDITOR=vim
+export VISUAL="$EDITOR"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

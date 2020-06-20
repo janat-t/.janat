@@ -1,1 +1,1 @@
-alias cftmp='cp ~/.janat/templates/codeforces.cpp'
+alias cftmp='cp $HOME/.janat/templates/codeforces.cpp'
