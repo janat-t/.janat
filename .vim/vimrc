@@ -68,7 +68,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-S-f> :Prettier<CR>
+map <C-A-f> :Prettier<CR>
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
 " for movement, rather than using more efficient movement commands, is also a
