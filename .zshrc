@@ -123,6 +123,7 @@ alias runp='lsof -i '
 alias pg="echo 'Pinging Google' && ping www.google.com"
 alias de='cd ~/Desktop'
 alias doc='cd ~/Documents'
+alias janat='cd ~/.janat'
 alias prog='cd ~/Documents/Programming'
 alias oneplan='cd ~/Desktop/wanplan'
 alias oneplan_api='cd ~/Desktop/oneplan_api'
