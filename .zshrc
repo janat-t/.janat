@@ -110,6 +110,8 @@ alias pip='pip3'
 alias pippypy='pip_pypy3'
 alias cpp='g++ -std=c++17 -o run'
 alias c='gcc -o run'
+alias brew='arch -x86_64 brew'
+alias x86='arch -x86_64'
 alias tm='tmux'
 alias tmx='zsh ./.tmux.workspace.sh'
 alias settm='vi ./.tmux.workspace.sh'
@@ -166,3 +168,4 @@ export TERM=screen-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
