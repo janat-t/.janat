@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 alias brew='arch -x86_64 brew'
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run'
-alias daejanat='launchctl list | grep janat'
+alias daejanat='sudo launchctl list | grep janat'
 alias de='cd ~/Desktop'
 alias doc='cd ~/Documents'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
