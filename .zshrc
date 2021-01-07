@@ -86,17 +86,18 @@ ZSH_DISABLE_COMPFIX="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  brew
+  extract
   git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  history
+  last-working-dir
   npm
   osx
   sudo
   web-search
-  last-working-dir
-  history
-  extract
   z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,6 +118,7 @@ alias myip='curl https://ipinfo.io; echo'
 alias npm-update='npx npm-check -u'
 alias oneplan='cd ~/Desktop/wanplan'
 alias oneplan_api='cd ~/Desktop/oneplan_api'
+alias path="echo $PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
 alias pip='pip3'
 alias pippypy='pip_pypy3'
@@ -172,5 +174,20 @@ export TERM=screen-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$PATH:/Users/janat/dev/flutter/bin"
+# export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="$PATH:/Users/janat/dev/flutter/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/janat/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/janat/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/janat/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/janat/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
