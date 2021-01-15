@@ -117,6 +117,7 @@ alias jupynote='jupyter notebook'
 alias myip='curl https://wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
 alias oneplan='cd ~/Desktop/wanplan'
+alias oneplan2='cd ~/Desktop/flutter/oneplan_v2'
 alias oneplan_api='cd ~/Desktop/oneplan_api'
 alias path="echo $PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
@@ -175,7 +176,7 @@ export TERM=screen-256color
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export PATH="$PATH:/Users/janat/dev/flutter/bin"
+export PATH="$PATH:/Users/janat/dev/flutter/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
