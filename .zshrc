@@ -147,6 +147,12 @@ commands() {
   awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
 }
 
+gacp() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
 export TERM=screen-256color
 
 # export MANPATH="/usr/local/man:$MANPATH"
