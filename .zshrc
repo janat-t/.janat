@@ -9,6 +9,10 @@ if [[ -r "$HOME/.janat/templates/.alias" ]]; then
     source "$HOME/.janat/templates/.alias"
 fi
 
+if [[ -r "$HOME/.janat/.alias.dir" ]]; then
+    source "$HOME/.janat/.alias.dir"
+fi
+
 export EDITOR=vim
 export VISUAL="$EDITOR"
 
@@ -108,22 +112,15 @@ alias brew='arch -x86_64 brew'
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run'
 alias daejanat='sudo launchctl list | grep janat'
-alias de='cd ~/Desktop'
-alias doc='cd ~/Documents'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias ip='cd ~/.ip'
-alias janat='cd ~/.janat'
 alias jupynote='jupyter notebook'
+alias m='make'
 alias myip='curl https://wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
-alias oneplan='cd ~/Desktop/wanplan'
-alias oneplan2='cd ~/Desktop/flutter/oneplan_v2'
-alias oneplan_api='cd ~/Desktop/oneplan_api'
 alias path="echo $PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
 alias pip='pip3'
 alias pippypy='pip_pypy3'
-alias prog='cd ~/Documents/Programming'
 alias py='python3'
 alias pypy='pypy3'
 alias python='python3'
@@ -134,7 +131,6 @@ alias tm='tmux'
 alias tmconf='vi ~/.tmux.conf'
 alias tmx='zsh ./.tmux.workspace.sh'
 alias topten='history | commands | sort -rn | head'
-alias ttcomp='cd ~/Documents/_Titech/titech_comp'
 alias update='source ~/.zshrc'
 alias usage='du -h -d1'
 alias vimrc='vi ~/.vim/vimrc'

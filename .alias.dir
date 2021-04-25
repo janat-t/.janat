@@ -1,0 +1,11 @@
+#!/bin/zsh
+alias de='cd ~/Desktop'
+alias doc='cd ~/Documents'
+alias ip='cd ~/.ip'
+alias janat='cd ~/.janat'
+alias oneplan2='cd ~/Desktop/flutter/oneplan_v2'
+alias oneplan='cd ~/Desktop/wanplan'
+alias oneplan_api='cd ~/Desktop/oneplan_api'
+alias prog='cd ~/Documents/Programming'
+alias sysprog='cd ~/Documents/_Titech/Y3/Q1/System\ Programming'
+alias ttcomp='cd ~/Documents/_Titech/titech_comp'
