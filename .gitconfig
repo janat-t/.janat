@@ -1,0 +1,7 @@
+[user]
+	email = janat.taerakul@gmail.com
+	name = Janat Taerakul
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
