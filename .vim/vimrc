@@ -24,6 +24,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
+" colorscheme: iceberg.vim corvine
+
 syntax on
 
 set number
@@ -41,20 +43,20 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_cpp_checkers = ['clang_check', 'gcc']
+
 let g:cpp_class_decl_highlight = 1
 let g:cpp_class_scope_highlight = 1
 
 let g:ycm_show_diagnostics_ui = 0
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['python']
-let g:syntastic_cpp_checkers = ['clang_check', 'gcc']
-
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsExpandTrigger="<tab>"
 
 let g:prettier#config#tab_width = 2
 
