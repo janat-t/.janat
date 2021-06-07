@@ -1,0 +1,2 @@
+# .janat
+my config files
