@@ -19,6 +19,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'uiiaoo/java-syntax.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -50,6 +51,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 let g:syntastic_cpp_checkers = ['clang_check', 'gcc']
+let g:syntastic_java_javac_classpath = "/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/javafx-sdk-11.0.2/lib/*:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/lib/*:resource:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/bin"
+let g:syntastic_java_checkers = ['checkstyle', 'javac']
 
 let g:cpp_class_decl_highlight = 1
 let g:cpp_class_scope_highlight = 1

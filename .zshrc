@@ -108,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias brew='arch -x86_64 brew'
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run'
 alias daejanat='sudo launchctl list | grep janat'
@@ -117,7 +116,7 @@ alias jupynote='jupyter notebook'
 alias m='make'
 alias myip='curl https://wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
-alias path="echo $PATH | sed 's/:/\\n/g'"
+alias path="echo \$PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
 alias pip='pip3'
 alias pippypy='pip_pypy3'
@@ -149,6 +148,15 @@ gacp() {
   git push
 }
 
+mdcd() {
+    mkdir $1
+    cd $1
+}
+
+pyserve() {
+    python3 -m http.server "$1"
+}
+
 export TERM=screen-256color
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -177,20 +185,35 @@ export TERM=screen-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$PATH:/Users/janat/dev/flutter/bin"
+
+if [ -d "$HOME/.janat/bin" ]
+then
+    export PATH="$HOME/.janat/bin:$PATH"
+fi
+
+if [ -d /opt/homebrew/bin ]
+then
+    export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+if [ -d "$HOME/.janat/dev/flutter/bin" ]
+then
+    export PATH="$PATH:$HOME/.janat/dev/flutter/bin"
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/janat/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
+    export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
 else
-    if [ -f "/Users/janat/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/janat/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/janat/miniconda3/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
