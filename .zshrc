@@ -186,9 +186,9 @@ export TERM=screen-256color
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [ -d "$HOME/.janat/bin" ]
+if [ -d "$HOME/.janat/dev/flutter/bin" ]
 then
-    export PATH="$HOME/.janat/bin:$PATH"
+    export PATH="$PATH:$HOME/.janat/dev/flutter/bin"
 fi
 
 if [ -d /opt/homebrew/bin ]
@@ -196,9 +196,9 @@ then
     export PATH="/opt/homebrew/bin:$PATH"
 fi
 
-if [ -d "$HOME/.janat/dev/flutter/bin" ]
+if [ -d "$HOME/.janat/bin" ]
 then
-    export PATH="$PATH:$HOME/.janat/dev/flutter/bin"
+    export PATH="$HOME/.janat/bin:$PATH"
 fi
 
 # >>> conda initialize >>>
@@ -216,3 +216,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+conda deactivate
