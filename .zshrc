@@ -206,7 +206,6 @@ fi
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-    export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
 else
     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"

@@ -51,7 +51,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 let g:syntastic_cpp_checkers = ['clang_check', 'gcc']
-let g:syntastic_java_javac_classpath = "/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/javafx-sdk-11.0.2/lib/*:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/lib/*:resource:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/bin"
+let g:syntastic_java_javac_classpath = "/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/javafx-sdk-11.0.2/lib/*:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/lib/*:resource:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para1/bin:/Users/janat/Documents/_Titech/Y3/Q2/Parallel Programming/parawork/Para2/bin"
 let g:syntastic_java_checkers = ['checkstyle', 'javac']
 
 let g:cpp_class_decl_highlight = 1
@@ -76,19 +76,3 @@ let g:airline_powerline_fonts = 1
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Prettier<CR>
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
-
