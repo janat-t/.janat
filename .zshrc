@@ -215,5 +215,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-conda deactivate
+if command -v conda &> /dev/null
+then
+    conda deactivate
+fi
