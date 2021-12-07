@@ -1,4 +1,5 @@
 #!/bin/zsh
+alias uni='cd ~/Documents/_Titech/Y3/Q4'
 alias de='cd ~/Desktop'
 alias doc='cd ~/Documents'
 alias ip='cd ~/.ip'
@@ -7,7 +8,4 @@ alias oneplan2='cd ~/Desktop/flutter/oneplan_v2'
 alias oneplan='cd ~/Desktop/wanplan'
 alias oneplan_api='cd ~/Desktop/oneplan_api'
 alias prog='cd ~/Documents/Programming'
-alias sysprog='cd ~/Documents/_Titech/Y3/Q1/System\ Programming'
-alias paraprog='cd ~/Documents/_Titech/Y3/Q2/Parallel\ Programming'
-alias compcon='cd ~/Documents/_Titech/Y3/Q2/Compiler\ Construction'
 alias ttcomp='cd ~/Documents/_Titech/titech_comp'

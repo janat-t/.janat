@@ -96,7 +96,7 @@ plugins=(
   history
   last-working-dir
   npm
-  osx
+  macos
   sudo
   web-search
   z
