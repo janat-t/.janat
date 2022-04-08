@@ -100,7 +100,6 @@ ZSH_DISABLE_COMPFIX="true"
 plugins=(
   brew
   extract
-  git
   history
   last-working-dir
   npm
