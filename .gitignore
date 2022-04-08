@@ -3,4 +3,4 @@
 .DS_Store
 *.swp
 /.vim/plugged
-
+plug.vim.old
