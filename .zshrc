@@ -112,55 +112,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias c='gcc -o run'
-alias cpp='g++ -std=c++17 -o run'
 alias daejanat='sudo launchctl list | grep janat'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias jupynote='jupyter notebook'
-alias m='make'
-alias myip='curl https://wtfismyip.com/json; echo'
-alias npm-update='npx npm-check -u'
-alias path="echo \$PATH | sed 's/:/\\n/g'"
-alias pg="echo 'Pinging Google' && ping www.google.com"
-alias pip='pip3'
-alias pippypy='pip_pypy3'
-alias py='python3'
-alias pypy='pypy3'
-alias python='python3'
-alias runp='lsof -i '
-alias settm='vi ./.tmux.workspace.sh'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias tm='tmux'
-alias tmconf='vi ~/.tmux.conf'
-alias tmx='zsh ./.tmux.workspace.sh'
-alias topten='history | commands | sort -rn | head'
 alias update='source ~/.zshrc'
-alias usage='du -h -d1'
-alias vimrc='vi ~/.vim/vimrc'
 alias x86='arch -x86_64'
-alias zshrc='vi ~/.zshrc'
+# Client Side Jupyter link
 alias jl='lsof -ti:8870 | xargs kill -9;ssh -N -f -L localhost:8870:localhost:8870 guc_dagger'
-
-unsetopt AUTO_CD
-
-commands() {
-  awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
-}
-
-gacp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
-
-mdcd() {
-    mkdir $1
-    cd $1
-}
-
-pyserve() {
-    python3 -m http.server "$1"
-}
 
 export TERM=screen-256color
 
