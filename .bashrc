@@ -47,8 +47,8 @@ if [[ -r "$HOME/.janat/.alias.git" ]]; then
     source "$HOME/.janat/.alias.git"
 fi
 
-if [[ -r "$HOME/.janat/.alias.bash" ]]; then
-    source "$HOME/.janat/.alias.bash"
+if [[ -r "$HOME/.janat/.alias.util" ]]; then
+    source "$HOME/.janat/.alias.util"
 fi
 
 test -s ~/.alias && . ~/.alias || true

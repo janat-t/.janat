@@ -17,6 +17,10 @@ if [[ -r "$HOME/.janat/.alias.git" ]]; then
     source "$HOME/.janat/.alias.git"
 fi
 
+if [[ -r "$HOME/.janat/.alias.util" ]]; then
+    source "$HOME/.janat/.alias.util"
+fi
+
 export EDITOR=vim
 export VISUAL="$EDITOR"
 
