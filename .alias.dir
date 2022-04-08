@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 alias uni='cd ~/Documents/_Titech/Y3/Q4'
 alias de='cd ~/Desktop'
 alias doc='cd ~/Documents'

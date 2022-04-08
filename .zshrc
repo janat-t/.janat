@@ -13,6 +13,10 @@ if [[ -r "$HOME/.janat/.alias.dir" ]]; then
     source "$HOME/.janat/.alias.dir"
 fi
 
+if [[ -r "$HOME/.janat/.alias.git" ]]; then
+    source "$HOME/.janat/.alias.git"
+fi
+
 export EDITOR=vim
 export VISUAL="$EDITOR"
 
@@ -135,6 +139,7 @@ alias usage='du -h -d1'
 alias vimrc='vi ~/.vim/vimrc'
 alias x86='arch -x86_64'
 alias zshrc='vi ~/.zshrc'
+alias jl='lsof -ti:8870 | xargs kill -9;ssh -N -f -L localhost:8870:localhost:8870 guc_dagger'
 
 unsetopt AUTO_CD
 
