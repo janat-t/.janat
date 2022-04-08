@@ -12,7 +12,7 @@
 
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
-#export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/vim
 #export EDITOR=/usr/bin/mcedit
 
 # For some news readers it makes sense to specify the NEWSSERVER variable here
@@ -39,7 +39,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+if [[ -r "$HOME/.janat/.alias.dir" ]]; then
+    source "$HOME/.janat/.alias.dir"
+fi
+
+if [[ -r "$HOME/.janat/.alias.git" ]]; then
+    source "$HOME/.janat/.alias.git"
+fi
+
+if [[ -r "$HOME/.janat/.alias.bash" ]]; then
+    source "$HOME/.janat/.alias.bash"
+fi
+
 test -s ~/.alias && . ~/.alias || true
 
+# User configuration
 
+alias update='source ~/.bashrc'
+
+# Server Side Jupyter link
 alias jl='lsof -ti:8870 | xargs kill -9;jupyter notebook --no-browser --port=8870'
