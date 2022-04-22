@@ -58,8 +58,12 @@ test -s ~/.alias && . ~/.alias || true
 alias update='source ~/.bashrc'
 
 # Server Side Jupyter link
-alias jl='lsof -ti:8870 | xargs kill -9;jupyter notebook --no-browser --port=8870'
+alias jn='lsof -ti:8870 | xargs kill -9;jupyter notebook --no-browser --port=8870'
+alias jl='lsof -ti:8870 | xargs kill -9;jupyter lab --no-browser --port=8870'
 
 export PS1="\[\033[38;5;209m\][\t] \[$(tput bold)\]\[\033[38;5;33m\]\w \[$(tput bold)\]\[\033[38;5;154m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /')\[$(tput sgr0)\]\[\033[38;5;229m\]❯ \[$(tput sgr0)\]"
 export TERM=screen-256color
 export LANG=en_US.UTF-8
+
+conda deactivate
+conda activate geo38

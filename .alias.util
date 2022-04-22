@@ -2,6 +2,7 @@
 
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run':w
+alias l='ls -lahF'
 alias m='make'
 alias jupynote='jupyter notebook'
 alias myip='curl https://wtfismyip.com/json; echo'
