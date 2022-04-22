@@ -3,6 +3,7 @@
 alias c='gcc -o run'
 alias cloudvm="ssh -L 30080:localhost:30080 -A jtaerakul@jtaerakul-1.cvm.indeed.net"
 alias cpp='g++ -std=c++17 -o run'
+alias l='ls -lahF'
 alias jupynote='jupyter notebook'
 alias m='make'
 alias myip='curl https://wtfismyip.com/json; echo'
