@@ -185,3 +185,4 @@ if command -v conda &> /dev/null
 then
     conda deactivate
 fi
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
