@@ -10,7 +10,7 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'vimsence/vimsence'
+Plug 'vimsence/vimsence'
 Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
@@ -68,11 +68,11 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 let g:prettier#config#tab_width = 2
 
-" colorscheme iceberg
-" set background=dark
-" let g:airline_theme='iceberg'
-colorscheme corvine
-let g:airline_theme='hybrid'
+colorscheme iceberg
+set background=dark
+let g:airline_theme='iceberg'
+" colorscheme corvine
+" let g:airline_theme='base16_mocha'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
