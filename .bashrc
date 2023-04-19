@@ -24,20 +24,6 @@ export EDITOR=/usr/bin/vim
 #
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/share/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/share/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/share/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/share/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 if [[ -r "$HOME/.janat/.alias.dir" ]]; then
     source "$HOME/.janat/.alias.dir"
@@ -64,6 +50,3 @@ alias jl='lsof -ti:8870 | xargs kill -9;jupyter lab --no-browser --port=8870'
 export PS1="\[\033[38;5;209m\][\t] \[$(tput bold)\]\[\033[38;5;33m\]\w \[$(tput bold)\]\[\033[38;5;154m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /')\[$(tput sgr0)\]\[\033[38;5;229m\]❯ \[$(tput sgr0)\]"
 export TERM=screen-256color
 export LANG=en_US.UTF-8
-
-conda deactivate
-conda activate geo38
