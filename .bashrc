@@ -63,3 +63,15 @@ alias jl='lsof -ti:8870 | xargs kill -9;jupyter notebook --no-browser --port=887
 export PS1="\[\033[38;5;209m\][\t] \[$(tput bold)\]\[\033[38;5;33m\]\w \[$(tput bold)\]\[\033[38;5;154m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /')\[$(tput sgr0)\]\[\033[38;5;229m\]❯ \[$(tput sgr0)\]"
 export TERM=screen-256color
 export LANG=en_US.UTF-8
+# BEGIN env Setup -- Managed by Ansible DO NOT EDIT.
+
+# Setup INDEED_ENV_DIR earlier.
+if [ -z "${INDEED_ENV_DIR}" ]; then
+    export INDEED_ENV_DIR="/Users/jtaerakul/env"
+fi
+
+# Single-brace syntax because this is required in bash and sh alike
+if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
+    . "${INDEED_ENV_DIR}/etc/indeedrc"
+fi
+# END env Setup -- Managed by Ansible DO NOT EDIT.
