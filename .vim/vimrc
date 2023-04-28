@@ -37,6 +37,7 @@ set ignorecase
 set smartcase
 set hidden
 set incsearch
+set autoread
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

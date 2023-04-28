@@ -29,3 +29,5 @@
 
  
 # END Managed by shell_setup role
+[core]
+	editor = vim
