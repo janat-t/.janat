@@ -203,3 +203,6 @@ export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 export DEVOPSCLOUD_REMOTE_ROOT=/home/jtaerakul/indeed/devopscloud
 export DEVOPSCLOUD_REMOTE_USER_HOST=jtaerakul-2.cvm.indeed.net
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
