@@ -1,26 +1,27 @@
 #!/bin/sh
 
 alias c='gcc -o run'
+alias cloudvm="ssh -L 30080:localhost:30080 -A jtaerakul@jtaerakul-1.cvm.indeed.net"
 alias cpp='g++ -std=c++17 -o run'
 alias l='ls -lahF'
-alias m='make'
 alias jupynote='jupyter notebook'
+alias m='make'
 alias myip='curl https://wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
 alias path="echo \$PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
-alias py='python3'
-alias python='python3'
 alias pip='pip3'
-alias pypy='pypy3'
 alias pippypy='pip_pypy3'
+alias py='python3'
+alias pypy='pypy3'
+alias python='python3'
 alias runp='lsof -i '
 alias settm='vim ./.tmux.workspace.sh'
 alias tm='tmux'
-alias tmconf='vim ~/.tmux.conf'
 alias tmx='./.tmux.workspace.sh'
 alias topten='history | commands | sort -rn | head'
 alias usage='du -h -d1'
+alias tmconf='vim ~/.tmux.conf'
 alias vimrc='vim ~/.vim/vimrc'
 alias zshrc='vim ~/.zshrc'
 alias bashrc='vim ~/.bashrc'

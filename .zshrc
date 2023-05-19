@@ -186,3 +186,21 @@ then
     conda deactivate
 fi
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# BEGIN env Setup -- Managed by Ansible DO NOT EDIT.
+
+# Setup INDEED_ENV_DIR earlier.
+if [ -z "${INDEED_ENV_DIR}" ]; then
+    export INDEED_ENV_DIR="/Users/jtaerakul/env"
+fi
+
+# Single-brace syntax because this is required in bash and sh alike
+if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
+    . "${INDEED_ENV_DIR}/etc/indeedrc"
+fi
+# END env Setup -- Managed by Ansible DO NOT EDIT.
+export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+export DEVOPSCLOUD_REMOTE_ROOT=/home/jtaerakul/indeed/devopscloud
+export DEVOPSCLOUD_REMOTE_USER_HOST=jtaerakul-2.cvm.indeed.net
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
