@@ -30,12 +30,6 @@ commands() {
   awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
 }
 
-gacp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
-
 mdcd() {
     mkdir $1
     cd $1

@@ -240,3 +240,10 @@ alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias gtl='gtl(){ git tag --sort=-v:refname -n -l "${1}*" }; noglob gtl'
 alias github='web_search github'
+
+gacp() {
+  git add --all
+  git commit -m "$1"
+  git push
+}
+

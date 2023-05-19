@@ -8,7 +8,6 @@ alias oneplan2='cd ~/Desktop/flutter/oneplan_v2'
 alias oneplan='cd ~/Desktop/wanplan'
 alias oneplan_api='cd ~/Desktop/oneplan_api'
 alias prog='cd ~/Documents/Programming'
-alias ttcomp='cd ~/Documents/_Titech/titech_comp'
 
 # Indeed Directories
 alias marvin='cd ~/indeed/marvinmaster'
