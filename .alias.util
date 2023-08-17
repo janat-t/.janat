@@ -1,7 +1,6 @@
 #!/bin/sh
 
 alias c='gcc -o run'
-alias cloudvm="ssh -L 30080:localhost:30080 -A jtaerakul@jtaerakul-1.cvm.indeed.net"
 alias cpp='g++ -std=c++17 -o run'
 alias l='ls -lahF'
 alias jupynote='jupyter notebook'
@@ -17,6 +16,7 @@ alias pypy='pypy3'
 alias python='python3'
 alias runp='lsof -i '
 alias settm='vim ./.tmux.workspace.sh'
+alias tf='terraform'
 alias tm='tmux'
 alias tmx='./.tmux.workspace.sh'
 alias topten='history | commands | sort -rn | head'
