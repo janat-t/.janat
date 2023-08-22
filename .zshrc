@@ -1,6 +1,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "/opt/intel/oneapi/setvars.sh" ]]; then
+#     source "/opt/intel/oneapi/setvars.sh"
+# fi
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -152,9 +156,9 @@ export TERM=screen-256color
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [ -d "$HOME/.janat/dev/flutter/bin" ]
+if [ -d "$HOME/flutter/bin" ]
 then
-    export PATH="$PATH:$HOME/.janat/dev/flutter/bin"
+    export PATH="$PATH:$HOME/flutter/bin"
 fi
 
 if [ -d /opt/homebrew/bin ]
@@ -186,21 +190,10 @@ then
     conda deactivate
 fi
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-# BEGIN env Setup -- Managed by Ansible DO NOT EDIT.
-
-# Setup INDEED_ENV_DIR earlier.
-if [ -z "${INDEED_ENV_DIR}" ]; then
-    export INDEED_ENV_DIR="/Users/jtaerakul/env"
-fi
-
-# Single-brace syntax because this is required in bash and sh alike
-if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
-    . "${INDEED_ENV_DIR}/etc/indeedrc"
-fi
-# END env Setup -- Managed by Ansible DO NOT EDIT.
-export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
-export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
-export DEVOPSCLOUD_REMOTE_ROOT=/home/jtaerakul/indeed/devopscloud
-export DEVOPSCLOUD_REMOTE_USER_HOST=jtaerakul-2.cvm.indeed.net
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [[ -n $VIRTUAL_ENV ]];
+then
+    VIRTUAL_ENV_BIN="${VIRTUAL_ENV}/bin"
+    export PATH="${VIRTUAL_ENV_BIN}:$PATH"
+fi

@@ -38,3 +38,12 @@ mdcd() {
 pyserve() {
     python3 -m http.server "$1"
 }
+
+cpypic() {
+    for pic in $(ls *.$1); do
+        date=$(stat -t %F $pic | awk '{print $10}' | sed 's/"//g')
+        dst="/Users/janat/Pictures/${date:0:4}/$date"
+        mkdir -p $dst
+        cp -n -v $pic $dst
+    done
+}
