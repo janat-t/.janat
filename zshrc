@@ -13,17 +13,15 @@ if [[ -r "$HOME/.janat/templates/.alias" ]]; then
     source "$HOME/.janat/templates/.alias"
 fi
 
-if [[ -r "$HOME/.janat/.alias.dir" ]]; then
-    source "$HOME/.janat/.alias.dir"
-fi
+sourcealias() {
+    for al in $(ls -a $HOME/.janat | grep "alias"); do
+        if [[ -r "$HOME/.janat/$al" ]]; then
+            source "$HOME/.janat/$al"
+        fi
+    done
+}
 
-if [[ -r "$HOME/.janat/.alias.git" ]]; then
-    source "$HOME/.janat/.alias.git"
-fi
-
-if [[ -r "$HOME/.janat/.alias.util" ]]; then
-    source "$HOME/.janat/.alias.util"
-fi
+sourcealias
 
 export EDITOR=vim
 export VISUAL="$EDITOR"
@@ -102,17 +100,17 @@ ZSH_DISABLE_COMPFIX="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  brew
-  extract
-  history
-  last-working-dir
-  npm
-  macos
-  sudo
-  web-search
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+    brew
+    extract
+    history
+    last-working-dir
+    npm
+    macos
+    sudo
+    web-search
+    z
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

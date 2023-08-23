@@ -3,7 +3,6 @@
 alias bashrc='vim ~/.bashrc'
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run'
-alias fext='ls | cut -f 2 -d . | sort | uniq -c'
 alias jupynote='jupyter notebook'
 alias l='ls -lahF'
 alias m='make'
@@ -40,11 +39,3 @@ pyserve() {
     python3 -m http.server "$1"
 }
 
-cpypic() {
-    for pic in $(ls *.$1); do
-        date=$(stat -t %F $pic | awk '{print $10}' | sed 's/"//g')
-        dst="/Users/janat/Pictures/${date:0:4}/$date"
-        mkdir -p $dst
-        cp -n -v $pic $dst
-    done
-}
