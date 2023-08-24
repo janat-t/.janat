@@ -117,17 +117,15 @@ if ! shopt -oq posix; then
 fi
 
 
-if [[ -r "$HOME/.janat/.alias.dir"  ]]; then
-    source "$HOME/.janat/.alias.dir"
-fi
+sourcealias() {
+    for al in $(ls -a $HOME/.janat | grep "alias"); do
+        if [[ -r "$HOME/.janat/$al" ]]; then
+            source "$HOME/.janat/$al"
+        fi
+    done
+}
 
-if [[ -r "$HOME/.janat/.alias.git"  ]]; then
-    source "$HOME/.janat/.alias.git"
-fi
-
-if [[ -r "$HOME/.janat/.alias.util"  ]]; then
-    source "$HOME/.janat/.alias.util"
-fi
+sourcealias
 
 test -s ~/.alias && . ~/.alias || true
 export DEVOPSCLOUD_ROOT=/home/jtaerakul/indeed/devopscloud
