@@ -4,5 +4,5 @@
 push.sh
 .DS_Store
 *.swp
-/.vim/plugged
+/vim/plugged
 plug.vim.old

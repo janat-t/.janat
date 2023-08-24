@@ -1,9 +1,10 @@
 #!/bin/sh
 
+alias bashrc='vim ~/.bashrc'
 alias c='gcc -o run'
 alias cpp='g++ -std=c++17 -o run'
-alias l='ls -lahF'
 alias jupynote='jupyter notebook'
+alias l='ls -lahF'
 alias m='make'
 alias myip='curl https://wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
@@ -18,13 +19,12 @@ alias runp='lsof -i '
 alias settm='vim ./.tmux.workspace.sh'
 alias tf='terraform'
 alias tm='tmux'
+alias tmconf='vim ~/.tmux.conf'
 alias tmx='./.tmux.workspace.sh'
 alias topten='history | commands | sort -rn | head'
 alias usage='du -h -d1'
-alias tmconf='vim ~/.tmux.conf'
 alias vimrc='vim ~/.vim/vimrc'
 alias zshrc='vim ~/.zshrc'
-alias bashrc='vim ~/.bashrc'
 
 commands() {
   awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
@@ -38,3 +38,4 @@ mdcd() {
 pyserve() {
     python3 -m http.server "$1"
 }
+
