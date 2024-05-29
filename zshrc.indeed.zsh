@@ -99,10 +99,12 @@ plugins=(
     brew
     extract
     history
+    kubectl
     last-working-dir
-    npm
     macos
+    npm
     sudo
+    vscode
     web-search
     z
     zsh-autosuggestions
@@ -118,8 +120,6 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias update='source ~/.zshrc'
 alias x86='arch -x86_64'
-# Client Side Jupyter link
-alias jl='lsof -ti:8870 | xargs kill -9;ssh -N -f -L localhost:8870:localhost:8870 guc_dagger'
 
 export TERM=screen-256color
 
@@ -208,3 +208,8 @@ then
     VIRTUAL_ENV_BIN="${VIRTUAL_ENV}/bin"
     export PATH="${VIRTUAL_ENV_BIN}:$PATH"
 fi
+
+. "/Users/jtaerakul/.indeed-kube-profile"
+
+# Created by `pipx` on 2024-04-12 05:32:10
+export PATH="$PATH:/Users/jtaerakul/.local/bin"
