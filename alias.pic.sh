@@ -80,7 +80,7 @@ mvpic() {
         [[ -z $date ]] && echo $pic doesn\'t have date data && continue
         [[ -z $cfld ]] && fld=${date:0:4} || fld=$cfld
         dst=${$(echo $PIC/$fld/$date*)[-1]}
-        $cmd -$mode$verbose $pic $dst;
+        $cmd -$mode$verbose "$pic" "$dst";
     done
 }
 
