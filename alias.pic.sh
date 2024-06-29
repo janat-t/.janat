@@ -9,7 +9,7 @@ alias cppic='mvpic -c'
 
 picdate() {
     (for pic in $@; do
-        exiftool -- $pic | grep -E "[1,2]\d{3}:\d{2}:\d{2}" | grep -E "Creat|Modif" | cut -f 2- -d : | awk '{print $1}' | sed "s/:/-/g" | sort | head -n 1
+        exiftool -- $pic | grep -E "[12][0-9]{3}:[0-9]{2}:[0-9]{2}" | grep -E "Creat|Modif" | cut -f 2- -d : | awk '{print $1}' | sed "s/:/-/g" | sort | head -n 1
     done) | sort | uniq
 
 }
