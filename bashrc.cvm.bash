@@ -132,3 +132,15 @@ export DEVOPSCLOUD_ROOT=/home/jtaerakul/indeed/devopscloud
 export KUBECONFIG=~/indeed/devopscloud/kubeconfig
 
 . "/home/jtaerakul/.indeed-kube-profile"
+# BEGIN env Setup -- Managed by Ansible DO NOT EDIT.
+
+# Setup INDEED_ENV_DIR earlier.
+if [ -z "${INDEED_ENV_DIR}" ]; then
+    export INDEED_ENV_DIR="/Users/jtaerakul/env"
+fi
+
+# Single-brace syntax because this is required in bash and sh alike
+if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
+    . "${INDEED_ENV_DIR}/etc/indeedrc"
+fi
+# END env Setup -- Managed by Ansible DO NOT EDIT.
