@@ -86,7 +86,7 @@ mvpic() {
 
 ls_ext() {
     exts=($(get_exts $@))
-    ls | grep -P "\.($(IFS=\| ; echo "${exts[*]}"))"
+    ls | grep -E "\.($(IFS=\| ; echo "${exts[*]}"))"
 }
 
 uniq_pic_date() {
