@@ -23,8 +23,6 @@ Plug 'vimsence/vimsence'
 Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-" colorscheme: iceberg.vim corvine
-
 syntax on
 
 set number
