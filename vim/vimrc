@@ -1,14 +1,10 @@
 call plug#begin()
-" Plug 'christoomey/vim-tmux-navigator'
-" Plug 'codota/tabnine-vim'
-" Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'arzg/vim-corvine'
 Plug 'cocopon/iceberg.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-github-dashboard'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prettier/vim-prettier'
 Plug 'scrooloose/nerdtree'
@@ -19,7 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vimsence/vimsence'
 Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
@@ -85,3 +80,4 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Prettier<CR>
 " Reload vim-colemak to remap any overridden keys
 " silent! source \"$HOME/.vim/bundle/vim-colemak/plugin/colemak.vim"
+
