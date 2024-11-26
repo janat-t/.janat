@@ -12,6 +12,8 @@ fi
 [ -e ~/.gitconfig ] && mv -f ~/.gitconfig ~/.gitconfig.old
 [ -e ~/.tmux.conf ] && mv -f ~/.tmux.conf ~/.tmux.conf.old
 [ -d ~/.vim ] && ([ -d ~/.vim.old ] && rm ~/.vim.old; mv ~/.vim ~/.vim.old)
+mkdir -p ~/.config
+[ -d ~/.config/nvim ] && ([ -d ~/.config/nvim.old ] && rm ~/.config/nvim.old; mv ~/.config/nvim ~/.config/nvim.old)
 
 case $mode in
     "zsh")
@@ -41,5 +43,7 @@ esac
 echo "Linking base config files"
 ln -sfFv ~/.janat/tmux.conf ~/.tmux.conf
 ln -sfFv ~/.janat/vim ~/.vim
+ln -sfFv ~/.janat/nvim ~/.config/nvim
 vim -c 'PlugInstall' -c 'qa!'
+nvim -c 'PlugInstall' -c 'qa!'
 echo "Linking complete!"
