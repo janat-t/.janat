@@ -18,7 +18,7 @@ get_exts() {
     if [ ${#@[@]} -gt 0  ]; then
         echo $@ | sed "s/,/ /g"
     else
-        echo CR3 CR2 JPG
+        echo CR3 CR2 JPG jpg DNG dng
     fi
 }
 

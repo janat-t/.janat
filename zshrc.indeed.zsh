@@ -197,7 +197,6 @@ if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
 fi
 # END env Setup -- Managed by Ansible DO NOT EDIT.
 export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
-export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 export DEVOPSCLOUD_REMOTE_ROOT=/home/jtaerakul/indeed/devopscloud
 export DEVOPSCLOUD_REMOTE_USER_HOST=jtaerakul-2.cvm.indeed.net
 
