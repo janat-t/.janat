@@ -6,7 +6,7 @@ alias cpp='g++ -std=c++17 -o run'
 alias jupynote='jupyter notebook'
 alias l='ls -lahF'
 alias m='make'
-alias myip='curl https://wtfismyip.com/json; echo'
+alias myip='curl https://ipv4.wtfismyip.com/json; echo'
 alias npm-update='npx npm-check -u'
 alias path="echo \$PATH | sed 's/:/\\n/g'"
 alias pg="echo 'Pinging Google' && ping www.google.com"
