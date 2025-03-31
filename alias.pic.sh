@@ -104,16 +104,9 @@ create_fld() {
     done
 }
 
-tmp() {
-    for pic in $(ls *.JPG); do
-        date=$(stat -t %F $pic | awk '{print $10}' | sed 's/"//g')
-        dst=(/Users/janat/Pictures/${date:0:4}/$date*)
-        for fld in $dst; do
-            if [ -d $fld  ]; then
-                echo $fld
-            fi
-        done
+all_fld() {
+    for fld in */**/; do
+        (echo ++++++++ $fld +++++++;cd "$fld"; $@)
     done
 }
-
 

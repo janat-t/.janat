@@ -155,11 +155,6 @@ then
     export PATH="$PATH:$HOME/flutter/bin"
 fi
 
-if [ -d /opt/homebrew/bin ]
-then
-    export PATH="/opt/homebrew/bin:$PATH"
-fi
-
 if [ -d "$HOME/.janat/bin" ]
 then
     export PATH="$HOME/.janat/bin:$PATH"
