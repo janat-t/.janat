@@ -19,7 +19,7 @@ sourcealias() {
 
 sourcealias
 
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # If you come from bash you might have to change your $PATH.
@@ -212,3 +212,11 @@ fi
 
 # Created by `pipx` on 2024-04-12 05:32:10
 export PATH="$PATH:/Users/jtaerakul/.local/bin"
+
+# pnpm
+export PNPM_HOME="/Users/jtaerakul/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
