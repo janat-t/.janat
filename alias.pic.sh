@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PIC=/Volumes/JANAT_2TB/Pictures
+export PIC=/Volumes/media/Pictures
 
 alias fext='ls | cut -f 2 -d . | sort | uniq'
 alias uniqf='ls | cut -f 1 -d . | sort | uniq'

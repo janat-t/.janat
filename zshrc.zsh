@@ -19,7 +19,7 @@ sourcealias() {
 
 sourcealias
 
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # If you come from bash you might have to change your $PATH.
@@ -179,6 +179,7 @@ then
     conda deactivate
 fi
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if [[ -n $VIRTUAL_ENV ]];
