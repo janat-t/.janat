@@ -195,6 +195,10 @@ fi
 if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
     . "${INDEED_ENV_DIR}/etc/indeedrc"
 fi
+
+# Enable AWS CLI command completion
+autoload bashcompinit && bashcompinit
+complete -C '/opt/homebrew/bin/aws_completer' aws
 # END env Setup -- Managed by Ansible DO NOT EDIT.
 export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 export DEVOPSCLOUD_REMOTE_ROOT=/home/jtaerakul/indeed/devopscloud
@@ -213,10 +217,3 @@ fi
 # Created by `pipx` on 2024-04-12 05:32:10
 export PATH="$PATH:/Users/jtaerakul/.local/bin"
 
-# pnpm
-export PNPM_HOME="/Users/jtaerakul/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

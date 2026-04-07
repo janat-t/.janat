@@ -143,4 +143,7 @@ fi
 if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
     . "${INDEED_ENV_DIR}/etc/indeedrc"
 fi
+
+# Enable AWS CLI command completion
+complete -C '/opt/homebrew/bin/aws_completer' aws
 # END env Setup -- Managed by Ansible DO NOT EDIT.
