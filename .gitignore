@@ -6,3 +6,5 @@ push.sh
 *.swp
 /vim/plugged
 plug.vim.old
+.secrets
+.env
