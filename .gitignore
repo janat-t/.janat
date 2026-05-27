@@ -8,3 +8,5 @@ push.sh
 plug.vim.old
 .secrets
 .env
+.agents/
+skills-lock.json
