@@ -89,8 +89,9 @@ mvpic() {
         [[ -z $date ]] && echo $pic doesn\'t have date data && continue
         [[ -z $cfld ]] && fld=${date:0:4} || fld=$cfld
         dst=${$(echo $PIC/$fld/$date*)[-1]}
-        $cmd "${flags[@]}" "$pic" "$dst";
+        $cmd "${flags[@]}" "$pic" "$dst" &
     done
+    wait
     unset pic_dates
 }
 
