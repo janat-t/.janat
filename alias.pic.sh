@@ -1,6 +1,14 @@
 #!/bin/sh
 
-export PIC=/Volumes/media/Pictures
+if [ -d "/Volumes/media/Pictures" ]
+then
+    export PIC="/Volumes/media/Pictures"
+fi
+
+if [ -d "/mnt/truenas/media/Pictures" ]
+then
+    export PIC="/mnt/truenas/media/Pictures"
+fi
 
 alias fext='ls | cut -f 2 -d . | sort | uniq'
 alias uniqf='ls | cut -f 1 -d . | sort | uniq'
