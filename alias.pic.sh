@@ -77,6 +77,12 @@ mvpic() {
     done
 
     exts=($(get_exts $exts))
+    if [[ $cmd == 'cp' && $mode == 'n' && $(uname -s) == 'Linux' ]]; then
+        flags=(--update=none)
+        [[ -n $verbose ]] && flags+=(-v)
+    else
+        flags=(-$mode$verbose)
+    fi
     if [[ -n $cfld ]]; then
         echo Creating $PIC/$cfld/{,$(uniq_pic_date $exts | sed 's/ /,/g' | tr '\n' ',')}
         sh -c "mkdir -pv $PIC/$cfld/{,$(uniq_pic_date $exts | sed 's/ /,/g' | tr '\n' ',')}"
@@ -88,7 +94,7 @@ mvpic() {
         [[ -z $date ]] && echo $pic doesn\'t have date data && continue
         [[ -z $cfld ]] && fld=${date:0:4} || fld=$cfld
         dst=${$(echo $PIC/$fld/$date*)[-1]}
-        $cmd -$mode$verbose "$pic" "$dst";
+        $cmd "${flags[@]}" "$pic" "$dst";
     done
 }
 
